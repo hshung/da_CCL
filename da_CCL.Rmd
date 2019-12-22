@@ -1,0 +1,20 @@
+---
+title: "The 135 types of [dǎ – N/NP] with token frequencies from CCL"
+author: "Steffi Hung"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r echo=FALSE, message=FALSE}
+library("wordcloud2")
+library(here)
+library(rio)
+```
+
+```{r CCL, echo=FALSE, message=FALSE}
+data <- import(here("data", "daFreq_CCL.xlsx"))
+wordcloud2(data, color = "random-light", backgroundColor = "dark")
+```
